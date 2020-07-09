@@ -49,5 +49,4 @@ class TextRank(object):
 
     def summarize(self, count=3):
         results = sorted(self.reordered[:count], key=lambda sentence: sentence.index)
-        results = [result.text for result in results]
         return [(result.text, result.frame_inds) for result in results]
